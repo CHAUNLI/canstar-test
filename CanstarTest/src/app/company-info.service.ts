@@ -11,7 +11,7 @@ export class CompanyInfoService {
 
   }
   getCompanies() {
-    const url ='assets/company-info.json';
+    const url ='assets/tables-data.json';
     return this.http.get(url)
       .toPromise()
       .then(res=>res.json())

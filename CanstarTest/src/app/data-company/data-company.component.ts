@@ -22,4 +22,7 @@ export class DataCompanyComponent implements OnInit {
       });
   }
 
+
+
+
 }

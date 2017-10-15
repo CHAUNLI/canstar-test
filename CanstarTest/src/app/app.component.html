@@ -9,10 +9,9 @@
 <div class="wrapper">
 
   <app-header></app-header>
-
   <div class="wrapper-content">
-    <a type="button" routerLink="/form_fill" routerLinkActive="active">form fill</a>
-    <a type="button" routerLink="/data" routerLinkActive="active">data display</a>
+    <button mat-raised-button color="accent" routerLink="/form_fill" routerLinkActive="active">form fill</button>
+    <button mat-raised-button color="warn" routerLink="/data" routerLinkActive="active">data display</button>
     <router-outlet></router-outlet>
   </div>
 
