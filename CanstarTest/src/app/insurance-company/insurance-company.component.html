@@ -1,4 +1,32 @@
-<p>
-  insurance-company works!
-</p>
+<h1>
+  Input your favourite insurance company
+</h1>
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)">
 
+<input type="text"
+       required
+       minlength="3"
+       name="name"
+       [(ngModel)]="name"
+       #userName="ngModel">
+<div *ngIf="companyName.errors?.required">input company name</div>
+<div *ngIf="companyName.errors?.minlength">
+  name length must have at least {{companyname.errors?.minlength.requiredLength}}，current length
+  {{companyName.errors?.minlength.actualLength}}
+</div>
+    <input type="text"
+           required
+           minlength="3"
+           name="telephone"
+           [(ngModel)]="telephone"
+           #userName="ngModel">
+    <input type="text"
+           required
+           minlength="3"
+           name="business"
+           [(ngModel)]="business"
+           #userName="ngModel">
+
+<button type="submit">submit</button>
+  {{loginForm.value | json}}
+</form>

@@ -1,18 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl} from '@angular/forms';
+import { CompanyInfoService} from '../company-info.service';
 
 @Component({
   selector: 'app-data-company',
   templateUrl: './data-company.component.html',
-  styleUrls: ['./data-company.component.css']
+  styleUrls: ['./data-company.component.css'],
+  providers:[CompanyInfoService]
 })
 export class DataCompanyComponent implements OnInit {
 
 
+  companies: any[];
+  constructor(private infoService:CompanyInfoService) {
 
-  constructor() { }
+  }
 
   ngOnInit() {
+    this.infoService.getCompanies()
+      .then(res => {
+        this.companies=res.companies;
+      });
   }
 
 }

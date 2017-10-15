@@ -13,6 +13,8 @@ import { MatFormFieldModule } from '@angular/material';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { FormsModule }   from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 
 
@@ -34,7 +36,9 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
     MatIconModule,
     RouteMouduleModule,
     MatChipsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
